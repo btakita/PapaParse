@@ -10,11 +10,13 @@ License: MIT
 	/* globals define */
 	if (typeof define === 'function' && define.amd)
 	{
+		console.debug('papaparse.js|amd|debug|1')
 		// AMD. Register as an anonymous module.
 		define([], factory);
 	}
 	else if (typeof module === 'object' && typeof exports !== 'undefined')
 	{
+		console.debug('papaparse.js|exports|debug|1')
 		// Node. Does not work with strict CommonJS, but
 		// only CommonJS-like environments that support module.exports,
 		// like Node.
@@ -22,6 +24,7 @@ License: MIT
 	}
 	else
 	{
+		console.debug('papaparse.js|root.Papa|debug|1')
 		// Browser globals (root is window)
 		root.Papa = factory();
 	}
